@@ -350,11 +350,11 @@ class Model(nn.Module):
         
         
         #冻结FFN、Atten，只微调归一化层和位置嵌入层
-        for i, (name, param) in enumerate(self.gpt2.named_parameters()):
-            if 'ln' in name or 'wpe' in name: 
-                param.requires_grad = True
-            else:
-                param.requires_grad = False
+#        for i, (name, param) in enumerate(self.gpt2.named_parameters()):
+#            if 'ln' in name or 'wpe' in name: 
+#                param.requires_grad = True
+#            else:
+#                param.requires_grad = False
         #全量微调
 #         for i, (name, param) in enumerate(self.gpt2.named_parameters()):
 #             param.requires_grad = True
@@ -365,11 +365,11 @@ class Model(nn.Module):
 #             else:
 #                 param.requires_grad = False
         #冻结FFN
-#         for i, (name, param) in enumerate(self.gpt2.named_parameters()):
-#             if 'ln' in name or 'wpe' in name or 'attn'in name: 
-#                 param.requires_grad = True
-#             else:
-#                 param.requires_grad = False
+        for i, (name, param) in enumerate(self.gpt2.named_parameters()):
+            if 'ln' in name or 'wpe' in name or 'attn'in name: 
+                param.requires_grad = True
+            else:
+                param.requires_grad = False
         #只调layernorm
 #         for i, (name, param) in enumerate(self.gpt2.named_parameters()):
 #             if 'ln' in name: 
