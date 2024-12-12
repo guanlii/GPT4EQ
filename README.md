@@ -112,6 +112,8 @@ pip install -r requirements.txt
     --workers 4 \
     --batch-size 20
   ```
+  You can also test it by using Google Colab.[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_Zo5YFQ8BROrKp4j2-Masb4vDFqEbV6B?usp=sharing)
+
 
 
 ## Acknowledgement
